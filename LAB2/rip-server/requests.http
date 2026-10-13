@@ -1,0 +1,36 @@
+### Отримати всі заявки
+GET http://localhost:4002/api/applications
+
+### Отримати заявку за id (підставте реальний id)
+GET http://localhost:4002/api/applications/ID_ЗАЯВКИ
+
+### Створити нову заявку
+POST http://localhost:4002/api/applications
+Content-Type: application/json
+
+{
+  "name": "Олена",
+  "phone": "+380 67 123 45 67",
+  "comment": "Потрібна консультація щодо організації"
+}
+
+### Спроба створити заявку без телефону (очікується 400)
+POST http://localhost:4002/api/applications
+Content-Type: application/json
+
+{
+  "name": "Олена"
+}
+
+### Оновити заявку (підставте реальний id)
+PUT http://localhost:4002/api/applications/ID_ЗАЯВКИ
+Content-Type: application/json
+
+{
+  "name": "Олена",
+  "phone": "+380 67 123 45 67",
+  "status": "in_progress"
+}
+
+### Видалити заявку (підставте реальний id)
+DELETE http://localhost:4002/api/applications/ID_ЗАЯВКИ
