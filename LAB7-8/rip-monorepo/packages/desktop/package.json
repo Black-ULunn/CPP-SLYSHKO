@@ -1,0 +1,11 @@
+{
+  "name": "rip-monorepo-desktop",
+  "version": "1.0.0",
+  "description": "Десктопний клієнт RIP на спільному ядрі @rip/core (Electron)",
+  "private": true,
+  "type": "module",
+  "main": "main.js",
+  "dependencies": { "@rip/core": "*" },
+  "devDependencies": { "electron": "^33.0.0" },
+  "scripts": { "start": "electron .", "test": "node --test" }
+}
